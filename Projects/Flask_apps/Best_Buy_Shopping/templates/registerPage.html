@@ -1,0 +1,65 @@
+{%include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+
+<body>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section"><img
+                        src="https://www.bestbuy.com/~assets/bby/_com/header-footer/images/bby_logo-a7e90594729ed2e119331378def6c97e.png"
+                        class="logo" width="120" alt="Best Buy Logo">
+                </h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-5">
+                <div class="login-wrap p-4 p-md-5">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <i class="far fa-user" style="color:white;"></i></div>
+                    <h3 class="text-center mb-4">Sign Up</h3>
+                    <ul class="errors" style=" list-style-type: none;">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                         <li>💡{{ message }}</li>
+
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+                    </ul>
+                    <form action="/register" method="POST"  name="register-form" enctype="multipart/form-data"
+                          class="login-form">
+                        			<input type="file" name="file" autocomplete="off" required>
+
+
+                        <div class="form-group" style="text-align:center;">
+
+                            {{ wtf.quick_form(form,novalidate=True,button_map={'submit':'primary'}) }}
+
+
+
+                        </div>
+                        <div class="form-group d-md-flex">
+                            <div class="w-50">
+
+                            </div>
+                            <div class="w-50 text-md-right" style="position:absolute !important;bottom:4.55rem;left:10rem; ">
+                                <a href="{{url_for('loginPage')}}">Log In</a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{%include 'footer.html' %}
+
+
+

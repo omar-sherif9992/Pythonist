@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- helllo thats a comment i clicked ctrl + divide -->
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" description="Omar Sherif Computer science engineer Student">
+    <title>Omar's CV</title>
+
+</head>
+
+<body style="background-color:antiquewhite;">
+    <center>
+        <h1>Omar's CV</h1>
+    </center>
+    <hr size="3" noshade="0">
+    <table>
+
+        <tr>
+            <td><img id="demo" src="image/omar-formal-pic.png" alt="Omar's Portofolio picture" onload=myFunction()>
+
+            </td>
+
+            <td>
+                <table cellspacing="0" cellpadding="5" width="100%">
+                    <thead>
+                        <tr>
+                            <th style="font-family:verdana;font-size:300%;" colspan="2">Omar Sherif Ali Hassan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Age</th>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th>phone number</th>
+                            <td>01008757772</td>
+                            <tr>
+                                <th>Email</th>
+                                <td>omar.Sherif9992@gmail.com</td>
+                            </tr>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <hr size="3" noshade="0">
+
+    <h2>My Experience</h2>
+    <table cellspacing="10" cellpadding="30">
+        <thead>
+            <tr>
+                <th>Work</th>
+                <th>Dates</th>
+            </tr>
+            <tbody>
+
+                <tr>
+                    <td>2019-2020</td>
+                    <td>data analysis</td>
+                </tr>
+
+            </tbody>
+
+
+
+        </thead>
+
+
+
+    </table>
+    <hr>
+    <h2>Contact Me</h2>
+    <table cellspacing="5" cellpadding="5">
+        <form action="mailto:omar.sherif9992@gmail.com" method="post" enctype=”multipart/form-data” name=”EmailForm”>
+            <tr>
+                <td><label for="">Your Name </label></td>
+
+                <td><input type="text" name="yourName"></td>
+
+
+            </tr>
+            <tr>
+                <td><label for="">Male</label>
+                    <input type="checkbox" name="male" value="male"></td>
+
+                <td><label for="">Female</label>
+                    <input type="checkbox" name="male" value="male"></td>
+            </tr>
+
+            <tr>
+                <td><label for="">Email </label></td>
+
+                <td><input type="email" name="yourEmail"></td>
+
+
+            </tr>
+            <tr>
+                <td><label for="">Password</label></td>
+
+                <td><input type="password" name="yourPassword"></td>
+
+
+
+            </tr>
+            <tr>
+                <td> <label for="">Upload your files</label></td>
+                <td> <input type="file" name="yourFiles"></td>
+            </tr>
+            <tr>
+                <td> <label for="">Enter your Birth date</label></td>
+                <td> <input type="date" name="Birth Date"></td>
+
+            </tr>
+            <tr>
+                <td> <label for="">Enter your Message</label></td>
+                <td> <textarea name="Message" id="" cols="30" rows="10"></textarea></td>
+                <td> <input type="submit" name="Message"></td>
+
+            </tr>
+    </table>
+
+
+
+
+    </form>
+
+
+</body>
+
+
+
+<script>
+    window.addEventListener("resize", myFunction);
+
+    function myFunction() {
+        var w = window.innerWidth - 400;
+
+        if ((document.fullscreen != null) || (window['fullScreen'] !== undefined) || (!window.screenTop && !window.screenY) || (window.fullScreen) ||
+            (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+
+            w = window.innerWidth - 1600;
+        }
+        var wk = w + ""
+        var h = window.innerHeight - 700 + "";
+        document.getElementById("demo").setAttribute("Width", wk);
+        document.getElementById("demo").setAttribute("height", h);
+
+    }
+</script>
+
+</html>

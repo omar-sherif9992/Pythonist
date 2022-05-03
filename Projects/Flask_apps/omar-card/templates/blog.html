@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Omar's Blog</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/assets/css/styles.css">
+     <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+    <title>Omar's Blog</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+            {% for (day,post) in data.items(): %}
+     <div class="content">
+                <div class="card">
+            {% if day!="Day 1": %}
+           <h2>{{day}}</h2>
+                    <p class="text">{{post}}</p> <a href="{{url_for('get_post',day=day)}}">Read</a>
+
+                    {% else: %}
+                            <h2>{{day}} worst Day</h2>
+                            <p class="text">{{post}}</p> <a href="{{url_for('get_post',day=day)}}">Read</a>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+</body>
+<footer>
+    <p>Made with ♥️ in Egypt</p>
+</footer>
+</html>

@@ -1,0 +1,61 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Restaurants{% endblock %}
+{% block styles %}
+{{ super() }}
+<link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 table-responsive">
+
+            <h1>All Cafes</h1>
+
+            <table class="table table-borderless">
+                <!-- This is where you will write the code to render a Bootstrap
+                Table that contains all the information from the
+                cafe-data.csv file. -->
+
+                <thead>
+                <tr>
+                    <th scope="col">Cafe Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Open</th>
+                    <th scope="col">Close</th>
+                    <th scope="col">Coffee</th>
+                    <th scope="col">Wifi</th>
+                    <th scope="col">Power</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for i in range(1,size) : %}
+                <tr>
+                    <td>{{cafes[i][0]}}</td>
+                    <td><a href="{{cafes[i][1]}}">Maps Link</a></td>
+                    <td>{{cafes[i][2]}}</td>
+                    <td>{{cafes[i][3]}}</td>
+                    <td>{{cafes[i][4]}}</td>
+                    <td>{{cafes[i][5]}}</td>
+                    <td>{{cafes[i][6]}}</td>
+
+
+
+                </tr>
+
+                {% endfor %}
+
+
+                </tbody>
+
+            </table>
+
+            <p><a href="{{url_for('home')}}">Return to index page</a></p>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

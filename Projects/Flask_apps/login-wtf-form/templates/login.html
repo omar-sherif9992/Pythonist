@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <h1>Login </h1>
+    <form method="POST" action="{{ url_for('login') }}" >
+        {{ form.csrf_token }}
+        {% if form.csrf_token.errors %}
+        <div class="warning">You have submitted an invalid CSRF token</div>
+        {% endif %}
+        <!--        <p>form.date.label<br>form.date(size=30)</p>-->
+        <p>{{ form.email.label }}<br> {{ form.email(size=30, maxlength=30) }}</p>
+        <p>{{form.age.label}}<br>{{form.age(size=30)}}</p>
+
+        <p>{{ form.password.label }}<br> {{ form.password(size=30, maxlength=15) }}</p>
+        <p>{{ form.confirm.label }}<br> {{ form.confirm(size=30, maxlength=15) }}</p>
+
+        <button class="btn  btn-light">{{form.submit}}</button>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <!--        <input  type="submit" value="Log In" class="btn btn-lg btn-primary">-->
+    </form>
+    {% if form.errors %}
+    <ul class="errors">
+        {% for field_name, field_errors in form.errors|dictsort if field_errors %}
+        {% for error in field_errors %}
+        <li style="color:red;">{{ form[field_name].label }} : {{ error }}</li>
+        {% endfor %}
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Description'>
+    <meta name='keywords' content='Search Engine Keywords'>
+    <meta name='author' content='Omar Sherif'>
+    <!-- it tells the browser made by who -->
+    <meta http-equiv='refresh' content='60'>
+    <meta name='theme-color' media='(prefers-color-scheme: light)' content='white'>
+    <meta name='theme-color' media='(prefers-color-scheme: dark)' content='black'>
+    <!-- it refreshes the page by specified by content -->
+    <link rel='stylesheet' type='text/css' href='address'>
+    <link rel='manifest' href='site.webmanifest'>
+    <link rel='icon' type='image/png' sizes='32x32' href='address'>
+
+    <!-- Bootstrap CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We' crossorigin='anonymous'>
+    <!--Font Awesome icons-->
+    <script src='https://kit.fontawesome.com/cc3cb258ce.js' crossorigin='anonymous'></script>
+    ,
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%include "header.html" %}
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('homePage') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Store</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-3">The Product</h1>
+        <p class="lead">Purchase The Product for only $99.</p>
+        <a href="#" id="buy_now_btn" class="btn btn-primary">Buy Now</a>
+      </div>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const checkout_public_key='{{checkout_public_key}}';
+        const checkout_session_id='{{checkout_session_id}}';
+
+
+</script>
+<script src="{{url_for('static', filename='vendor/js/app.js')}}"></script>
+
+{%include "footer.html" %}

@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Omar's Portfolio</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="static/assets/css/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+    <noscript>
+        <link rel="stylesheet" href="static/assets/css/noscript.css"/>
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Nav -->
+    <nav id="nav">
+        <a href="#" class="icon solid fa-home"><span>Home</span></a>
+        <a href="#work" class="icon solid fa-folder"><span>Work</span></a>
+        <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Me -->
+        <article id="home" class="panel intro">
+            <header>
+                <h1>Omar Sherif</h1>
+                <p>Python Developer</p>
+                <br>
+                <a href="https://github.com/omar-sherif9992" class="icon brands fa-github"><span>Github </span></a>
+                <br>
+                  <a href="https://www.linkedin.com/in/omar-sherif-2152021a3/"
+           class="icon brands fa-linkedin"><span> linkedin </span></a>
+                <br>
+                <a href="https://mega.nz/folder/FggAUAID#aF5qbxVjUfosGTxufJYxRQ"
+           class="icon solid fa-folder"><span> CV</span></a>
+                  <br>
+                <a href="{{url_for('get_blog')}}"
+           class="icon solid fa-blog"><span> Blog</span></a>
+
+            </header>
+            <a href="#work" class="jumplink pic">
+                <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+                <img src="static/images/me.png" alt="Omar's Profile Pic"/>
+            </a>
+        </article>
+
+        <!-- Work -->
+        <article id="work" class="panel">
+            <header>
+                <h2>Projects</h2>
+            </header>
+            <p>
+                Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit. Vestibulum ante ipsum
+                primis in faucibus orci luctus et ultrices posuere cubilia luctus elit eget interdum.
+            </p>
+            <section>
+                <div class="row">
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic01.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic02.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic03.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic04.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic05.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic06.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic07.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic08.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic09.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic10.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic11.jpg" alt=""></a>
+                    </div>
+                    <div class="col-4 col-6-medium col-12-small">
+                        <a href="#" class="image fit"><img src="static/images/pic12.jpg" alt=""></a>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <!-- Contact -->
+        <article id="contact" class="panel">
+            <header>
+                <h2>Contact Me</h2>
+            </header>
+            <form action="mailto:omar.sherif9992@gmail.com" method="post" enctype=”multipart/form-data”
+                  name=”EmailForm”>
+                <div>
+                    <div class="row">
+                        <div class="col-6 col-12-medium">
+                            <input type="text" name="name" placeholder="Name"/>
+                        </div>
+                        <div class="col-6 col-12-medium">
+                            <input type="email" name="email" placeholder="Email"/>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="subject" placeholder="Subject"/>
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" placeholder="Message" rows="6"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <input type="submit" value="Send Message"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </article>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <ul class="copyright" style="color:white">
+            <li>&copy; {{year}} Omar.</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="static/assets/js/jquery.min.js"></script>
+<script src="static/assets/js/browser.min.js"></script>
+<script src="static/assets/js/breakpoints.min.js"></script>
+<script src="static/assets/js/util.js"></script>
+<script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>

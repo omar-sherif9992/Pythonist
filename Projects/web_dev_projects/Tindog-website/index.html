@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>tinDog</title>
+
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTEyIDUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im00NjcuNTM0IDExMi4wODhjLTIzLjA3My0yOS4yMzctNTcuNjgzLTY0LjA4OC05MS41MzQtNjQuMDg4LTEwLjI3IDAtMjAuNjIyIDcuMDM0LTM0LjU5NCAyMC4xOTEtMTkuNzg1LTguODIxLTYzLjMxMi0yMC4xOTEtODUuNDA2LTIwLjE5MS0yMi4xMTMgMC02NS42NCAxMS4zNzgtODUuNDA2IDIwLjE5MS0xMy45NzItMTMuMTU3LTI0LjMyNC0yMC4xOTEtMzQuNTk0LTIwLjE5MS0zMy44NTEgMC02OC40NjEgMzQuODUxLTkxLjUzNCA2NC4wODgtMTcuMTkyIDIxLjc4NS00NC40NjYgNjIuNzQzLTQ0LjQ2NiA3OS45MTIgMCAzMi4yNDcgMS4wNDMgNDYuNzI0IDI3LjIgODEuNiAxOS45NjYgMjYuNjIxIDIyLjA4MiA2NS40IDM1LjQ3NSA4Ni40NTggOC43NjMgMTMuNzc5IDIxLjk3NyAxOS4yNyAzNy4yMDYgMTUuNDY0IDE1LjE3Ni0zLjc5NCAyNS4wMy0xNi41ODggMjkuMzk2LTM4LjA4NyAxNi44OSAyMy4yNjMgMTQuMDQ3IDM2LjkzNyAxNS4xNjIgNDQuODQ5IDEuMTIzIDMwLjE0MiA1Mi42OTQgODEuNzE2IDExMS41NjEgODEuNzE2IDU4Ljc3IDAgMTEwLjQzNi01MS41MiAxMTEuNTYxLTgxLjcxNSAxLjEwOS03Ljg3My0xLjgyOC0yMS41NjcgMTUuMTQ4LTQ0LjkxMyA0LjQ2MyAyMi4wNDQgMTYuMDIxIDM5LjMyOSAzOC41ODggMzkuMzI5IDQyLjI5NyAwIDM1LjI0MS02NS40MTggNjMuNTAyLTEwMy4xIDI2LjE1Ny0zNC44NzYgMjcuMi00OS4zNTMgMjcuMi04MS42LjAwMS0xNy4xNy0yNy4yNzMtNTguMTI4LTQ0LjQ2NS03OS45MTN6bS0yMTEuNTM0IDIzMS45MTJjLTguMzMgMC0xOC4xOTYtMTIuNTc1LTIyLjI2OC0yMC41MTYgMTEuODMtNC42NDYgMzIuNjk4LTQuNjQ4IDQ0LjUzNSAwLTQuMDcxIDcuOTQxLTEzLjkzNyAyMC41MTYtMjIuMjY3IDIwLjUxNnptLS4wMDEgNjMuOTYyYzEwLjM5NiA3Ljg1MiAyMy45NzggMTIuNTkxIDM3LjkzNCAxNC4zNDEtMjUuMjI5IDEyLjkwOS01MC42MDkgMTIuOTIzLTc1Ljg2NyAwIDEzLjk1NS0xLjc1IDI3LjUzOC02LjQ4OSAzNy45MzMtMTQuMzQxem0yMDMuMjAxLTE1My41NjJjLTI1LjE5MyAzMy41ODktMjkuMDU4IDgyLjIzNi0zOC4yMDcgOTAuMjgxLTUuNzExLS41Mi03LjgyMi0xNy45NjYtOC4zMzEtMjMuNjgyLTIuNjIyLTI5LjQ5NyAzLjMzOC03MS42NCAzLjMzOC05Ni45OTkgMC00My4yNzktMzIuMzEzLTEwOC40MDQtMzMuNjg5LTExMS4xNTUtMy45NTItNy45MDQtMTMuNTY0LTExLjEwNi0yMS40NjYtNy4xNTYtNy45MDQgMy45NTItMTEuMTA3IDEzLjU2My03LjE1NiAyMS40NjYgOC40MzEgMTYuODYyIDMwLjMxMSA2Ny4xMyAzMC4zMTEgOTYuODQ1IDAgMTYuNjkyLTMuMDUyIDQzLjM5OS0zLjgyMSA2OS4wMzUtOC42NTEgNy40NTYtNDQuMTc5IDQwLjY1Ni00NC4xNzkgODIuOTY1IDAgMTkuODMzLTU1LjY0NyAxOS44OTItNjUuODY1LjUzMy0uNDMtLjgxNi0xLjAyMy0xLjc1MS0xLjY1OC0yLjU0NCAyNC4wMzktNy42NyA0My41MjMtMzcuOTI5IDQzLjUyMy01My45ODkgMC00Mi45NDgtMTEyLTQyLjk0OC0xMTIgMCAwIDE2LjA1NCAxOS40MTggNDYuMjk3IDQzLjUyMyA1My45ODktLjYyNy43ODItMS4yMiAxLjcxMy0xLjY1OCAyLjU0My0xMC4yNTMgMTkuNDE4LTY1Ljg2NSAxOS4yNjYtNjUuODY1LS41MzIgMC00Mi4zMDktMzUuNTI4LTc1LjUwOS00NC4xNzktODIuOTY1LS43NDEtMjQuNzA2LTMuODIxLTUyLjc1My0zLjgyMS02OS4wMzUgMC0yOS42NDIgMjEuODgyLTc5Ljk2MSAzMC4zMTEtOTYuODQ1IDMuOTUyLTcuOTAzLjc0OC0xNy41MTQtNy4xNTYtMjEuNDY2LTcuOTAzLTMuOTUyLTE3LjUxNS0uNzQ4LTIxLjQ2NiA3LjE1Ni0xLjM3NiAyLjc1MS0zMy42ODkgNjcuODc2LTMzLjY4OSAxMTEuMTU1IDAgMjUuMzcyIDUuOTU4IDY3LjUyMyAzLjMzNyA5Ni45OTktLjUwOCA1LjcxNi0yLjYxOSAyMy4xNjEtOC4zMzEgMjMuNjgyLTkuMjQ1LTguMTI5LTEyLjkyNS01Ni41NzItMzguMjA3LTkwLjI4MS0yMC41NzgtMjcuNDM3LTIwLjc5Ny0zNC45MTYtMjAuOC02MS41MjkgMS44NTYtNy4zNzEgMTcuMDE4LTM1LjUgMzkuODI4LTYzLjc2OCAyNC4wNDktMjkuODA1IDQ3LjMyOC00Ny45NjYgNjIuNzM1LTQ5LjA1MSA0LjcyNyAyLjM3NSAxNC41MTkgMTEuNjU4IDIyLjEyNCAxOS4yNjIgNi4wNTkgNi4wNiAxNS44MzIgNi4yNyAyMi4xNDYuNDYyIDcuOTUtNS40MjcgNTUuNzc2LTE5Ljc3NiA3Ny4xNjgtMTkuNzc2czY5LjIxOCAxNC4zNDkgNzcuMTY4IDE5Ljc3NmM2LjMwNyA1LjgwMSAxNi4wOCA1LjYwNCAyMi4xNDYtLjQ2MiAxMy4yMDEtMTMuMjAxIDE5LjMwNy0xNy44MzggMjIuMTI2LTE5LjI2MiAxNS40MDcgMS4wODcgMzguNjg1IDE5LjI0OSA2Mi43MzIgNDkuMDUxIDIyLjgxIDI4LjI2OCAzNy45NzIgNTYuMzk3IDM5LjgyOCA2My43NjgtLjAwMiAyNi42MTMtLjIyMiAzNC4wOTItMjAuOCA2MS41Mjl6Ii8+PGNpcmNsZSBjeD0iMTgwIiBjeT0iMjEyIiByPSIyMCIvPjxjaXJjbGUgY3g9IjMzMiIgY3k9IjIxMiIgcj0iMjAiLz48L3N2Zz4=">
+
+    <!--load all Font Awesome styles -->
+    <script src="https://kit.fontawesome.com/cc3cb258ce.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section id="title">
+
+        <!-- Nav Bar -->
+        <div class="container-fluid">
+            <nav class="navbar  navbar-expand-lg navbar-dark ">
+
+                <a class="navbar-brand" href="#">
+                    <img width="30" height="24" class="d-inline-block align-text-top" src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTEyIDUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im00NjcuNTM0IDExMi4wODhjLTIzLjA3My0yOS4yMzctNTcuNjgzLTY0LjA4OC05MS41MzQtNjQuMDg4LTEwLjI3IDAtMjAuNjIyIDcuMDM0LTM0LjU5NCAyMC4xOTEtMTkuNzg1LTguODIxLTYzLjMxMi0yMC4xOTEtODUuNDA2LTIwLjE5MS0yMi4xMTMgMC02NS42NCAxMS4zNzgtODUuNDA2IDIwLjE5MS0xMy45NzItMTMuMTU3LTI0LjMyNC0yMC4xOTEtMzQuNTk0LTIwLjE5MS0zMy44NTEgMC02OC40NjEgMzQuODUxLTkxLjUzNCA2NC4wODgtMTcuMTkyIDIxLjc4NS00NC40NjYgNjIuNzQzLTQ0LjQ2NiA3OS45MTIgMCAzMi4yNDcgMS4wNDMgNDYuNzI0IDI3LjIgODEuNiAxOS45NjYgMjYuNjIxIDIyLjA4MiA2NS40IDM1LjQ3NSA4Ni40NTggOC43NjMgMTMuNzc5IDIxLjk3NyAxOS4yNyAzNy4yMDYgMTUuNDY0IDE1LjE3Ni0zLjc5NCAyNS4wMy0xNi41ODggMjkuMzk2LTM4LjA4NyAxNi44OSAyMy4yNjMgMTQuMDQ3IDM2LjkzNyAxNS4xNjIgNDQuODQ5IDEuMTIzIDMwLjE0MiA1Mi42OTQgODEuNzE2IDExMS41NjEgODEuNzE2IDU4Ljc3IDAgMTEwLjQzNi01MS41MiAxMTEuNTYxLTgxLjcxNSAxLjEwOS03Ljg3My0xLjgyOC0yMS41NjcgMTUuMTQ4LTQ0LjkxMyA0LjQ2MyAyMi4wNDQgMTYuMDIxIDM5LjMyOSAzOC41ODggMzkuMzI5IDQyLjI5NyAwIDM1LjI0MS02NS40MTggNjMuNTAyLTEwMy4xIDI2LjE1Ny0zNC44NzYgMjcuMi00OS4zNTMgMjcuMi04MS42LjAwMS0xNy4xNy0yNy4yNzMtNTguMTI4LTQ0LjQ2NS03OS45MTN6bS0yMTEuNTM0IDIzMS45MTJjLTguMzMgMC0xOC4xOTYtMTIuNTc1LTIyLjI2OC0yMC41MTYgMTEuODMtNC42NDYgMzIuNjk4LTQuNjQ4IDQ0LjUzNSAwLTQuMDcxIDcuOTQxLTEzLjkzNyAyMC41MTYtMjIuMjY3IDIwLjUxNnptLS4wMDEgNjMuOTYyYzEwLjM5NiA3Ljg1MiAyMy45NzggMTIuNTkxIDM3LjkzNCAxNC4zNDEtMjUuMjI5IDEyLjkwOS01MC42MDkgMTIuOTIzLTc1Ljg2NyAwIDEzLjk1NS0xLjc1IDI3LjUzOC02LjQ4OSAzNy45MzMtMTQuMzQxem0yMDMuMjAxLTE1My41NjJjLTI1LjE5MyAzMy41ODktMjkuMDU4IDgyLjIzNi0zOC4yMDcgOTAuMjgxLTUuNzExLS41Mi03LjgyMi0xNy45NjYtOC4zMzEtMjMuNjgyLTIuNjIyLTI5LjQ5NyAzLjMzOC03MS42NCAzLjMzOC05Ni45OTkgMC00My4yNzktMzIuMzEzLTEwOC40MDQtMzMuNjg5LTExMS4xNTUtMy45NTItNy45MDQtMTMuNTY0LTExLjEwNi0yMS40NjYtNy4xNTYtNy45MDQgMy45NTItMTEuMTA3IDEzLjU2My03LjE1NiAyMS40NjYgOC40MzEgMTYuODYyIDMwLjMxMSA2Ny4xMyAzMC4zMTEgOTYuODQ1IDAgMTYuNjkyLTMuMDUyIDQzLjM5OS0zLjgyMSA2OS4wMzUtOC42NTEgNy40NTYtNDQuMTc5IDQwLjY1Ni00NC4xNzkgODIuOTY1IDAgMTkuODMzLTU1LjY0NyAxOS44OTItNjUuODY1LjUzMy0uNDMtLjgxNi0xLjAyMy0xLjc1MS0xLjY1OC0yLjU0NCAyNC4wMzktNy42NyA0My41MjMtMzcuOTI5IDQzLjUyMy01My45ODkgMC00Mi45NDgtMTEyLTQyLjk0OC0xMTIgMCAwIDE2LjA1NCAxOS40MTggNDYuMjk3IDQzLjUyMyA1My45ODktLjYyNy43ODItMS4yMiAxLjcxMy0xLjY1OCAyLjU0My0xMC4yNTMgMTkuNDE4LTY1Ljg2NSAxOS4yNjYtNjUuODY1LS41MzIgMC00Mi4zMDktMzUuNTI4LTc1LjUwOS00NC4xNzktODIuOTY1LS43NDEtMjQuNzA2LTMuODIxLTUyLjc1My0zLjgyMS02OS4wMzUgMC0yOS42NDIgMjEuODgyLTc5Ljk2MSAzMC4zMTEtOTYuODQ1IDMuOTUyLTcuOTAzLjc0OC0xNy41MTQtNy4xNTYtMjEuNDY2LTcuOTAzLTMuOTUyLTE3LjUxNS0uNzQ4LTIxLjQ2NiA3LjE1Ni0xLjM3NiAyLjc1MS0zMy42ODkgNjcuODc2LTMzLjY4OSAxMTEuMTU1IDAgMjUuMzcyIDUuOTU4IDY3LjUyMyAzLjMzNyA5Ni45OTktLjUwOCA1LjcxNi0yLjYxOSAyMy4xNjEtOC4zMzEgMjMuNjgyLTkuMjQ1LTguMTI5LTEyLjkyNS01Ni41NzItMzguMjA3LTkwLjI4MS0yMC41NzgtMjcuNDM3LTIwLjc5Ny0zNC45MTYtMjAuOC02MS41MjkgMS44NTYtNy4zNzEgMTcuMDE4LTM1LjUgMzkuODI4LTYzLjc2OCAyNC4wNDktMjkuODA1IDQ3LjMyOC00Ny45NjYgNjIuNzM1LTQ5LjA1MSA0LjcyNyAyLjM3NSAxNC41MTkgMTEuNjU4IDIyLjEyNCAxOS4yNjIgNi4wNTkgNi4wNiAxNS44MzIgNi4yNyAyMi4xNDYuNDYyIDcuOTUtNS40MjcgNTUuNzc2LTE5Ljc3NiA3Ny4xNjgtMTkuNzc2czY5LjIxOCAxNC4zNDkgNzcuMTY4IDE5Ljc3NmM2LjMwNyA1LjgwMSAxNi4wOCA1LjYwNCAyMi4xNDYtLjQ2MiAxMy4yMDEtMTMuMjAxIDE5LjMwNy0xNy44MzggMjIuMTI2LTE5LjI2MiAxNS40MDcgMS4wODcgMzguNjg1IDE5LjI0OSA2Mi43MzIgNDkuMDUxIDIyLjgxIDI4LjI2OCAzNy45NzIgNTYuMzk3IDM5LjgyOCA2My43NjgtLjAwMiAyNi42MTMtLjIyMiAzNC4wOTItMjAuOCA2MS41Mjl6Ii8+PGNpcmNsZSBjeD0iMTgwIiBjeT0iMjEyIiByPSIyMCIvPjxjaXJjbGUgY3g9IjMzMiIgY3k9IjIxMiIgcj0iMjAiLz48L3N2Zz4="
+                    /> tinDog
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cta">Download</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contact</a>
+                        </li>
+
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+
+            </nav>
+
+
+            <!-- Title -->
+
+            <div class="row">
+                <div class="col-lg-6 col-md-12 ">
+                    <h1>Meet new and interesting dogs nearby.</h1>
+                    <button type="button" class="btn btn-dark btn-lg download-btn"><i class="fab fa-apple"></i> Download</button>
+                    <button type="button" class="btn btn-outline-light btn-lg download-btn"><i class="fab fa-google-play"></i> Download</button>
+                </div>
+                <div class="col-lg-6 col-md-12 ">
+                    <img src="images/iphone6.png" class="title-image" alt="iphone-mockup">
+                </div>
+            </div>
+
+    </section>
+    </div>
+
+    <!-- Features -->
+
+    <section id="features">
+        <div class="container-fluid row">
+            <div class="col-lg-4">
+                <h3 class="features-h"><i class="fas fa-check-circle features-i fa-4x"></i><br>Easy to use.</h3>
+                <p class="features-t">So easy to use, even your dog could do it.</p>
+            </div>
+            <div class="col-lg-4">
+
+                <h3 class="features-h"> <i class="fas fa-bullseye features-i fa-4x"></i><br>Elite Clientele</h3>
+                <p class="features-t">We have all the dogs, the greatest dogs.</p>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="features-h"><i class="fas fa-heart features-i fa-4x"></i><br>Guaranteed to work.</h3>
+                <p class="features-t">Find the love of your dog's life or your money back.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+                    <img class="testimonial-img " src="images/dog-img.jpg" alt="dog-profile">
+                    <em>Pebbles, New York</em>
+
+                </div>
+                <div class="carousel-item">
+
+                    <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+                    <img class="testimonial-img" src="images/lady-img.jpg" alt="lady-profile">
+                    <em>Beverly, Illinois</em>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+        </div>
+    </section>
+
+
+
+    <!-- Press -->
+
+    <section id="press">
+        <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+        <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+        <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+    </section>
+
+
+    <!-- Pricing -->
+
+    <section id="pricing">
+
+
+        <h2>A Plan for Every Dog's Needs</h2>
+        <p>Simple and affordable price plans for your and your dog.</p>
+
+        <div class="container-fluid row">
+            <div class="card col-lg-3 col-md-5 col-sm-12">
+
+
+                <div class="card-header">
+                    <h3>Chihuahua</h3>
+                </div>
+                <div class="card-body">
+
+                    <h2>Free</h2>
+                    <p>5 Matches Per Day</p>
+                    <p>10 Messages Per Day</p>
+                    <p>Unlimited App Usage</p>
+                    <button type="button" class="btn btn-lg btn-outline-primary">Sign Up</button>
+
+
+                </div>
+
+            </div>
+
+            <div class="card col-lg-3 col-md-5 col-sm-12">
+
+
+                <div class="card-header">
+
+
+                    <h3>Mastiff</h3>
+
+                </div>
+                <div class="card-body">
+                    <h2>$99 / mo</h2>
+                    <p>Pirority Listing</p>
+                    <p>Unlimited Matches</p>
+                    <p>Unlimited Messages</p>
+                    <p>Unlimited App Usage</p>
+                    <button type="button" class="btn btn-lg btn-primary">Sign Up</button>
+
+                </div>
+
+            </div>
+
+            <div class="card col-lg-3 col-md-12ٍ col-sm-12">
+                <div class="card-header">
+                    <h3>Labrador</h3>
+                </div>
+                <div class="card-body">
+                    <h2>$49 / mo</h2>
+                    <p>Unlimited Matches</p>
+                    <p>Unlimited Messages</p>
+                    <p>Unlimited App Usage</p>
+                    <button type="button" class="btn btn-lg btn-primary">Sign Up</button>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action -->
+
+    <section id="cta">
+        <div class="container-fluid cta-text">
+            <h3 class="cta-h">Find the True Love of Your Dog's Life Today.</h3>
+            <button type="button" class="btn btn-dark btn-lg download-btn"><i class="fab fa-apple"></i> Download</button>
+            <button type="button" class="btn btn-light btn-lg download-btn"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer id="footer">
+
+        <div class="container-fluid">
+
+            <a href="#" style="color:grey;"><i class="fab fa-instagram fa-4x download-btn"></i></a>
+            <a href="#" style="color:rgb(5, 18, 209);"><i class="fab fa-facebook-square fa-4x download-btn"></i></a>
+            <a href="#" style="color:grey;"><i class="fas fa-envelope fa-4x download-btn"></i></a>
+            <a href="#" style="color:grey;"><i class="fab fa-twitter fa-4x download-btn"></i></a>
+
+
+        </div>
+        <p>© Copyright 2018 TinDog</p>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

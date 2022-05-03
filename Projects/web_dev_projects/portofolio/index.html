@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar's Portofolio</title>
+</head>
+
+<body>
+    <a href="https://github.com/omar-sherif9992" target="_blank"> <img id="github" src="images/github-logo-modified.png" onload=myFunction() alt="Github-logo"></a>
+
+    <a href="mailto:omar.sherif9992@gmail.com?subject=Contact%20me&body=Dear%20Omar%20Sherif%20,%20" target="_blank ">
+        <img src="images/emai-logo.png " onload=myFunction() alt="email-logo " id="mail">
+    </a>
+
+    <a href="https://mega.nz/folder/FggAUAID#aF5qbxVjUfosGTxufJYxRQ " target="_blank "> <img id="cv" src="images/cv-logo.png " onload=myFunction() alt="cv-logo "></a>
+
+    <a href="https://www.linkedin.com/in/omar-sherif-2152021a3/ " target="_blank ">
+        <img id="linkedln" src="images/linkeldin-logo.png " onload=myFunction() alt="linkeldn-logo ">
+    </a>
+
+</body>
+<script>
+    window.addEventListener("resize ", myFunction);
+
+    function myFunction() {
+        var w = window.innerWidth - 700;
+
+        if ((document.fullscreen != null) || (window['fullScreen'] !== undefined) || (!window.screenTop && !window.screenY) || (window.fullScreen) ||
+            (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+
+            w = window.innerWidth - 4200;
+        }
+        var wk = w + " "
+        var h = window.innerHeight - 5400 + " ";
+        document.getElementById("cv ").style.width = wk;
+        document.getElementById("cv ").style.height = h;
+        document.getElementById("email ").style.width = wk;
+        document.getElementById("email ").style.left = h;
+        document.getElementById("cv ").style.width = wk;
+        document.getElementById("cv ").style.height = h;
+
+
+    }
+</script>
+
+</html>

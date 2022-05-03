@@ -1,0 +1,28 @@
+{%include 'header.html' %}
+<section class="ftco-section" xmlns="http://www.w3.org/1999/html">
+    <div class="container">
+			<div class="row justify-content-center">
+                <ul class="errors" style=" list-style-type: none;">
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+                         <li>💡{{ message }}</li>
+
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+                    </ul>
+            </div>
+
+        
+
+    </div>
+</section>
+
+
+
+
+
+
+{%include 'footer.html' %}

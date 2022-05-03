@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h1>works {{username}}</h1>
+    <form action="{{url_for('login')}}" method="post" enctype="multipart/form-data" >
+        <label>name</label>
+        <input type="text" name="username" placeholder="name">
+        <label >password</label>
+        <input type="password" name="password" placeholder="Password">
+        <input type="file" name="file" placeholder="name">
+        <button>ok</button>
+
+    </form>
+
+</body>
+
+</html>

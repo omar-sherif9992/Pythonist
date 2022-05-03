@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+    <form action="{{url_for('add')}}" method="POST" enctype="multipart/form-data">
+        <label>Book Name</label>
+        <input name="book_name" type="text">
+        <label>Book Author</label>
+        <input name="author" type="text">
+        <label>Rating</label>
+        <input name="rating" type="text">
+        <button type="submit">Add Book</button>
+    </form>
+
+{% if condition==1:%}
+    <h1 style="color:red;">Invalid data</h1>
+{% elif condition==2%}
+    <h1 style="color:green;">Successfully Added</h1>
+{% elif condition==3:%}
+    <h1 style="color:red;">You've already entered this book before</h1>
+{% endif %}
+</body>
+</html>

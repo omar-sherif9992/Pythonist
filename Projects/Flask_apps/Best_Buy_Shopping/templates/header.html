@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
+    <meta name='description'
+          content='Shop Best Buy for electronics, computers, appliances, cell phones, video games & more new tech'>
+    <meta name='keywords' content=' best buy international, best buy countries'>
+    <meta name='author' content='Omar Sherif'>
+    <!-- it tells the browser made by who -->
+    <meta http-equiv='refresh' content='600'>
+    <meta name='theme-color' media='(prefers-color-scheme: light)' content='white'>
+    <meta name='theme-color' media='(prefers-color-scheme: dark)' content='black'>
+    <!-- it refreshes the page by specified by content -->
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/styles.css')}}">
+    <link rel='manifest' href='site.webmanifest'>
+    <!--    Omar Favicon-->
+    <!--    <link rel='icon' type='image/png' sizes='32x32' href='../static/images/favicon-32x32.png'>-->
+
+    <!--    Best Buy Favicon-->
+    <link rel="icon" href="https://www.bestbuy.com/~assets/bby/_com/header-footer/images/favicon-32.png" sizes="32x32">
+        <!--load all Font Awesome styles -->
+    <script src="https://kit.fontawesome.com/cc3cb258ce.js" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' rel='stylesheet'
+          integrity='sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We' crossorigin='anonymous'>
+    <!--Font Awesome-->
+    <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet"
+          type="text/css">
+
+
+<!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/clean-blog.min.css')}}" rel="stylesheet">
+       <!-- login CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/css/intlTelInput.css">
+
+<style>   .footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+margin-top:-20px;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}</style>
+ <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+ <title>Best Buy</title>
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="{{url_for('homePage')}}">BEST BUY</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                {% if not logged_in: %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('loginPage') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('registerPage') }}">Register</a>
+                </li>
+                {% else %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                </li>
+                {% endif %}
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+

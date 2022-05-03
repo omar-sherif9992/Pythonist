@@ -1,0 +1,77 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{post.img_url}}')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                    <h1>{{post.title}}</h1>
+                    <h2 class="subheading">{{post.subtitle}}</h2>
+                    <span class="meta">Posted by
+              <a href="{{url_for('get_all_posts')}}">{{post.user.name}}</a>
+              on {{post.date}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <p>
+                    <!--            #Safe filter applied to the post.body-->
+                    <!--            NOTE: The data from the CKEditorField is saved as HTML. It contains all the structure and styling of the blog post. In order for this structure to be reflected when you go to the post.html page for the blog post, you need to add a Jinja safe() filter.-->
+                    <!--This makes sure that when Jinja renders the post.html template, it doesn't treat the HTML as text.-->
+                    <!--To apply a Jinja filter, you need the pipe symbol "|" and this goes between the Jinja expression and Jinja filter.-->
+                    <!--e.g. {‌{ Jinja expression | Jinja filter }}-->
+                    {{post.body|safe}}
+                </p>
+                <hr>
+                {% if current_user.id == 1: %}
+                <div class="clearfix">
+                    <a class="btn btn-primary float-right" href="{{url_for('edit_post', post_id=post.id)}}">Edit
+                        Post</a>
+                </div>
+                {% endif %}
+            </div>
+            {% if comments != []: %}
+
+            <div class="col-lg-8 col-md-10 mx-auto comment" >
+                 {% for comment in comments: %}
+                <ul class="commentList">
+                        <li>
+                <div class="commenterImage">
+                    <img src="{{comment.user.email | gravatar}}" alt=""/>
+                </div>
+
+                 <div class="commentText"> <h3 style="text-align:left">{{comment.user.name}}</h3>{{comment.text|safe}}
+                     <span class="date sub-text">by  since {{comment.date}}</span>
+
+            </div>
+                             </li>
+                      </ul>
+               {% endfor %}
+
+            </div>
+            {% endif %}
+
+            <div class="container-fluid" style="text-align:left;">
+                <!--            #Load the CKEditor-->
+                {{ ckeditor.load() }}
+                <!--            #Configure it with the name of the form field from CommentForm-->
+                {{ ckeditor.config(name='comment_text') }}
+                <!--            #Create the wtf quickform from CommentForm-->
+                {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+{% include "footer.html" %}
