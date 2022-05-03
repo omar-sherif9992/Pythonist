@@ -12,10 +12,10 @@
 
 
 <div align="center">
-    <img src="./woolly-online-money-transfer-1.png" alt="Logo" width="120" height="120">
+    <img src="./Logo/pythonist-logo.png" alt="Logo" width="120" height="120">
 
 
-  <h3 align="center">myPocket</h3>
+  <h3 align="center">Pythonist</h3>
 
   <p align="center">
      100+ Python Project !
@@ -27,12 +27,6 @@
 </div>
 
 
-## 💡 Description
-The objective of this project is developing a Mobile application that can help you track your Expenses through the week.
-
-<div align="center">
-<img src="./58288896-28de-4982-8eb4-5677ce89a4be.jpg" alt="Logo" height="300px">
-</div>
 
 
 
@@ -54,6 +48,144 @@ The objective of this project is developing a Mobile application that can help y
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+
+
+## 💡 Table Of Contents
+The objective of this project is developing a Mobile application that can help you track your Expenses through the week.
+
+```
+.
+├── API_projects
+│   ├── habbit-tracker
+│   ├── ISS
+│   ├── Kayne-tkinter-app
+│   ├── pdf-to-audio
+│   ├── Quizly_app
+│   ├── stock_track
+│   ├── sunset
+│   ├── Trave_deals_app
+│   ├── weather_detecting
+│   └── Workout_tracking
+├── Automate_Projects
+│   ├── best-program-laguage-matplot
+│   ├── Birthday_Wisher
+│   ├── file_manipulation
+│   ├── find_Duplicates
+│   ├── Format_Name
+│   ├── grouping-data
+│   ├── lego-matplot
+│   ├── Mail Merge Project Start
+│   ├── Motivation_Quote
+│   ├── NATO-alphabet-start
+│   ├── squirel
+│   ├── university-pandas
+│   ├── us-states-game-start
+│   └── weather-learning
+├── console_games
+│   ├── Blackjack
+│   ├── Caesar-Cipher
+│   ├── Calculator
+│   ├── Coffee_machine_V2
+│   ├── Coffe_Machine
+│   ├── GuessNumber
+│   ├── Hangman_Game
+│   ├── HigherLowerGame
+│   ├── PasswordGenerator
+│   ├── QuizGame
+│   └── SecretAuction
+├── extracting_&_drawing_picture
+│   ├── hirst_painting.py
+│   └── spot-pic.jpeg
+├── Flask_apps
+│   ├── angela-start-blog
+│   ├── Best_Buy_Shopping
+│   ├── blog_start
+│   ├── blueprint
+│   ├── coffe_review
+│   ├── favicon-32x32.png
+│   ├── higher-lower-game
+│   ├── home-login-register
+│   ├── html_creator
+│   ├── html_forum
+│   ├── library
+│   ├── login-wtf-form
+│   ├── main_blog
+│   ├── omar-card
+│   ├── recaptcha_
+│   └── top-movies
+├── Gui_Games
+│   ├── etch_&_sketch_game
+│   ├── snake_game
+│   ├── turtle-crossing-game
+│   ├── turtle_designs
+│   └── turtles_race_game
+├── mysql
+│   └── first_project
+├── Notification
+│   ├── advanced_email_manager.py
+│   ├── email_manager.py
+│   ├── Email-Verification-Gmail-template.html
+│   ├── notification_manager.py
+│   ├── __pycache__
+│   └── whatsapp_manager.py
+├── Open-cv-projects
+│   └── watermark.py
+├── pillow_projects
+│   ├── add_watermarks_to_pictures.py
+│   ├── black_&_white.py
+│   ├── convert_extensios.py
+│   ├── filter_pics.py
+│   ├── resize_pics.py
+│   ├── rotate_pics.py
+│   └── to_asci_converter_pics.py
+├── PYTUBE-projects
+│   ├── __init__.py
+│   └── main.py
+├── RESTful-api-apps
+│   ├── cafe-app
+│   └── warehouse
+├── Selenium_apps
+│   ├── Big-cookie
+│   ├── Data-Entry
+│   ├── instagram-followers
+│   ├── linkeldln-add-certificate
+│   ├── linkeldn-easy-apply-job
+│   ├── meta-keyword
+│   ├── tinder-like
+│   ├── twitter-complain
+│   └── wikipedia
+├── sockets_apps
+│   └── first
+├── Soup_apps
+│   ├── Amazon-headset-price
+│   ├── best_movies
+│   ├── spotify_playlist
+│   ├── Web_Scrape
+│   ├── wuzzuf-jobs
+│   └── ycombinater_news
+├── Tkinter-apps
+│   ├── Converter-App
+│   ├── Flip
+│   ├── Password-Manager-App
+│   └── Pomadora-App
+└── web_dev_projects
+    ├── bootstrap install
+    ├── Bootstrap-starter-Template
+    ├── bubbles
+    ├── debug-problems
+    ├── omar's -cv
+    ├── omar-website
+    ├── portofolio
+    └── Tindog-website
+
+
+
+
+```
+
+
+
+
 ## Postman
 <p>Used Postman to help me to test my program and write the <a href="https://documenter.getpostman.com/view/17286684/UUy65PqF">Documentation</a></p>
 <a href="https://www.getpostman.com/"><img src="https://assets.getpostman.com/common-share/postman-logo-horizontal-320x132.png" /></a><br />
@@ -62,6 +194,26 @@ The objective of this project is developing a Mobile application that can help y
 
 # FrameWork
 * [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Libraries Used
 * Selenium : for website flow testing
