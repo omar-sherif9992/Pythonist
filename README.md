@@ -48,6 +48,28 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+## Libraries Used
+* Selenium : for website flow testing
+* BeatufilSoup : for Scraping the Web data
+* Pandas & Csv : for creating and manipulating Excel files .
+* Numpy : mathematical functions, random number generators, linear algebra routines, Fourier transforms, and more. Interoperable
+* matplot : creating static, animated, and interactive visualizations in Python
+* Tkinter : for creating GUI Apps
+* pillow : Python Imaging Library
+* Open Cv :  provides a real-time optimized Computer Vision library, tools, and hardware.
+* Request : API Requests
+* qrcode : for creating a unique Qrcodes .
+* urlshortners: for creating short urls
+
+
+# FrameWork
+* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
+
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 
 ## 💡 Table Of Contents
@@ -169,13 +191,6 @@ The objective of this project is developing a Mobile application that can help y
 │   ├── Password-Manager-App
 │   └── Pomadora-App
 └── web_dev_projects
-    ├── bootstrap install
-    ├── Bootstrap-starter-Template
-    ├── bubbles
-    ├── debug-problems
-    ├── omar's -cv
-    ├── omar-website
-    ├── portofolio
     └── Tindog-website
 
 
@@ -184,45 +199,9 @@ The objective of this project is developing a Mobile application that can help y
 ```
 
 
-
-
 ## Postman
 <p>Used Postman to help me to test my program and write the <a href="https://documenter.getpostman.com/view/17286684/UUy65PqF">Documentation</a></p>
 <a href="https://www.getpostman.com/"><img src="https://assets.getpostman.com/common-share/postman-logo-horizontal-320x132.png" /></a><br />
-
-
-
-# FrameWork
-* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Libraries Used
-* Selenium : for website flow testing
-* BeatufilSoup : for Scraping the Product's data
-* qrcode : for creating a unique Qrcode for User's Inventory
-* Pandas & Csv : for creating and manipulating Excel files uploaded and downloaded by the user.
-* urlshortners: for creating short urls
-
-
 
 
 
