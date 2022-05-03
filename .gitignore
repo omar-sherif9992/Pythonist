@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+*/*/*/*.iml
+*/*/*/*.xml
+*/*/*/*__pycache__
+*/*/*/*.pyc
+*.iml
+*.xml
+.xml
+.idea
+Projects/__init__.py
+
+
+
+Projects/.env
+
