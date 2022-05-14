@@ -73,7 +73,6 @@
 
 
 ## 💡 Table Of Contents
-The objective of this project is developing a Mobile application that can help you track your Expenses through the week.
 
 ```
 .
