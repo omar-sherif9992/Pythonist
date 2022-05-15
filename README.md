@@ -37,7 +37,7 @@
 * [Object-oriented programming (OOP)](https://en.wikipedia.org/wiki/Object-oriented_programming#:~:text=Object%2Doriented%20programming%20(OOP),(often%20known%20as%20methods)) (Encapsulation, Abstraction, Inheritance, and Polymorphism)
 * [Exception Handling](https://en.wikipedia.org/wiki/Exception_handling)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-* Databases: SQLite using [SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) (locally) and [PostgreSQL](https://www.heroku.com/postgres) (externally)
+* Databases: SQLite using [SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/) (development) and [PostgreSQL](https://www.heroku.com/postgres) (production)
 * HTML
 * CSS
 * Javascript
