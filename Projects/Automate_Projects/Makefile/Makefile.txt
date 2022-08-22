@@ -1,0 +1,5 @@
+workday:
+        echo done with workday
+        cat Makefile.txt
+hi: workday
+        @echo hello from
